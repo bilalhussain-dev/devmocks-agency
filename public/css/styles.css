@@ -8,3 +8,22 @@
 #hamburger.active .bar:nth-of-type(3) {
 	transform: rotate(-45deg) translateX(-4px) translateY(-5px);
 }
+
+
+body {
+	font-family: 'Inter', system-ui, sans-serif;
+}
+.font-display {
+	font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+@keyframes float {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-20px); }
+}
+.tech-badge {
+	transition: all 0.3s ease;
+}
+.tech-badge:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
