@@ -346,85 +346,214 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-dark-lighter">
-      <div class="container mx-auto px-6">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
-              Our Core Principles
-            </h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto text-pretty">
-              At Devmocks, we believe in transforming ambitious ideas into
-              exceptional digital experiences through innovation, precision, and
-              unwavering commitment to excellence.
-            </p>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
-            <div class="space-y-8">
-              <div class="flex items-start space-x-4">
-                <div
-                  class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0"
-                >
-                  <span class="text-primary font-bold text-2xl">1</span>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2">
-                    Innovation-Driven Development
-                  </h3>
-                  <p class="text-gray-300">
-                    We leverage cutting-edge technologies and methodologies to
-                    deliver solutions that push the boundaries of what's
-                    possible.
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start space-x-4">
-                <div
-                  class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0"
-                >
-                  <span class="text-primary font-bold text-2xl">2</span>
-                </div>
-                <div>
-                  <h3 class="text-xl font-semibold mb-2">
-                    Client-Centric Approach
-                  </h3>
-                  <p class="text-gray-300">
-                    Your vision drives our process. We collaborate closely to
-                    ensure every solution aligns perfectly with your business
-                    objectives.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="relative">
-              <img
-                alt="evmocks team at work"
-                class="rounded-lg shadow-2xl"
-                loading="lazy"
-                src="public/img/devmocks.jpg"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent rounded-lg"
-              ></div>
-            </div>
-          </div>
-
-          <div class="text-center">
-            <h3 class="text-3xl font-display font-bold mb-6">
-              Combine innovation, durability and efficiency
-            </h3>
-            <p class="text-gray-300 max-w-4xl mx-auto text-lg text-pretty">
-              Devmocks serves as a catalyst for digital transformation in the
-              enterprise software domain. We propose sustainable solutions for
-              enterprise services.
-            </p>
-          </div>
-        </div>
+    <section id="about" class="py-20 bg-dark-lighter relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl"></div>
+          <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
       </div>
-    </section>
+
+      <div class="container mx-auto px-6 relative z-10">
+          <div class="max-w-6xl mx-auto">
+              <!-- Header -->
+              <div class="text-center mb-20">
+                  <div class="inline-block mb-4">
+                      <span class="text-primary text-sm font-semibold tracking-wider uppercase bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
+                          What Drives Us
+                      </span>
+                  </div>
+                  <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 bg-gradient-to-r from-white via-primary to-secondary bg-clip-text text-transparent">
+                      Our Core Principles
+                  </h2>
+                  <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                      At <span class="text-primary font-semibold">Devmocks</span>, we transform ambitious ideas into 
+                      exceptional digital experiences through innovation, precision, and 
+                      unwavering commitment to excellence.
+                  </p>
+              </div>
+
+              <!-- Main Content Grid -->
+              <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                  <!-- Principles Cards -->
+                  <div class="space-y-6">
+                      <!-- Principle 1 -->
+                      <div class="principle-card bg-dark-elevated p-6 rounded-2xl border border-dark-border hover:border-primary/30 group">
+                          <div class="flex items-start space-x-5">
+                              <div class="principle-number w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                  <span class="text-primary font-bold text-2xl">1</span>
+                              </div>
+                              <div class="flex-1">
+                                  <h3 class="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                                      Innovation-Driven Development
+                                  </h3>
+                                  <p class="text-gray-400 leading-relaxed">
+                                      We leverage cutting-edge technologies and agile methodologies to 
+                                      deliver solutions that push the boundaries of what's possible, keeping 
+                                      your business ahead of the curve.
+                                  </p>
+                                  <div class="mt-4 flex items-center space-x-2 text-sm text-primary">
+                                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                      </svg>
+                                      <span>Cutting-edge tech stack</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Principle 2 -->
+                      <div class="principle-card bg-dark-elevated p-6 rounded-2xl border border-dark-border hover:border-secondary/30 group">
+                          <div class="flex items-start space-x-5">
+                              <div class="principle-number w-14 h-14 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                  <span class="text-secondary font-bold text-2xl">2</span>
+                              </div>
+                              <div class="flex-1">
+                                  <h3 class="text-xl font-semibold mb-3 group-hover:text-secondary transition-colors">
+                                      Client-Centric Approach
+                                  </h3>
+                                  <p class="text-gray-400 leading-relaxed">
+                                      Your vision drives our process. We collaborate closely with you at every 
+                                      step to ensure every solution perfectly aligns with your business objectives 
+                                      and exceeds expectations.
+                                  </p>
+                                  <div class="mt-4 flex items-center space-x-2 text-sm text-secondary">
+                                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                      </svg>
+                                      <span>Transparent communication</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Principle 3 -->
+                      <div class="principle-card bg-dark-elevated p-6 rounded-2xl border border-dark-border hover:border-accent-green/30 group">
+                          <div class="flex items-start space-x-5">
+                              <div class="principle-number w-14 h-14 bg-gradient-to-br from-accent-green/20 to-accent-green/10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                  <span class="text-accent-green font-bold text-2xl">3</span>
+                              </div>
+                              <div class="flex-1">
+                                  <h3 class="text-xl font-semibold mb-3 group-hover:text-accent-green transition-colors">
+                                      Quality & Performance First
+                                  </h3>
+                                  <p class="text-gray-400 leading-relaxed">
+                                      We don't compromise on quality. Every line of code is crafted with precision, 
+                                      tested rigorously, and optimized for peak performance to deliver exceptional 
+                                      user experiences.
+                                  </p>
+                                  <div class="mt-4 flex items-center space-x-2 text-sm text-accent-green">
+                                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                      </svg>
+                                      <span>Rigorous testing standards</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Principle 4 -->
+                      <div class="principle-card bg-dark-elevated p-6 rounded-2xl border border-dark-border hover:border-accent-purple/30 group">
+                          <div class="flex items-start space-x-5">
+                              <div class="principle-number w-14 h-14 bg-gradient-to-br from-accent-purple/20 to-accent-purple/10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                  <span class="text-accent-purple font-bold text-2xl">4</span>
+                              </div>
+                              <div class="flex-1">
+                                  <h3 class="text-xl font-semibold mb-3 group-hover:text-accent-purple transition-colors">
+                                      Scalability & Future-Proofing
+                                  </h3>
+                                  <p class="text-gray-400 leading-relaxed">
+                                      We build solutions that grow with your business. Our architecture ensures 
+                                      your platform can handle increasing demands while remaining flexible for 
+                                      future innovations.
+                                  </p>
+                                  <div class="mt-4 flex items-center space-x-2 text-sm text-accent-purple">
+                                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                      </svg>
+                                      <span>Built for tomorrow</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Image Section -->
+                  <div class="relative">
+                      <div class="image-container rounded-2xl overflow-hidden shadow-2xl border border-dark-border">
+                          <img
+                              alt="Devmocks team collaborating on innovative solutions"
+                              class="rounded-2xl w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                              loading="lazy"
+                              src="public/img/devmocks.jpg"
+                          />
+                          <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-60"></div>
+                          
+                          <!-- Floating Stats on Image -->
+                          <div class="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
+                              <div class="bg-dark-elevated/90 backdrop-blur-md p-4 rounded-xl border border-primary/20">
+                                  <div class="text-3xl font-display font-bold text-primary mb-1">150+</div>
+                                  <div class="text-sm text-gray-300">Projects Delivered</div>
+                              </div>
+                              <div class="bg-dark-elevated/90 backdrop-blur-md p-4 rounded-xl border border-secondary/20">
+                                  <div class="text-3xl font-display font-bold text-secondary mb-1">98%</div>
+                                  <div class="text-sm text-gray-300">Client Satisfaction</div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Decorative Elements -->
+                      <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl animate-float"></div>
+                      <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-2xl animate-float" style="animation-delay: 1s;"></div>
+                  </div>
+              </div>
+
+              <!-- Bottom Section -->
+              <div class="text-center mb-16">
+                  <h3 class="text-3xl md:text-4xl font-display font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                      Innovation Meets Reliability
+                  </h3>
+                  <p class="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed mb-8">
+                      Devmocks serves as a catalyst for digital transformation in the enterprise software domain. 
+                      We deliver sustainable, scalable solutions that drive business growth and operational excellence, 
+                      helping organizations thrive in the digital age.
+                  </p>
+              </div>
+
+              <!-- Value Propositions Grid -->
+              <div class="grid md:grid-cols-3 gap-6">
+                  <div class="stat-card bg-dark-elevated p-8 rounded-2xl border border-dark-border text-center">
+                      <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                          </svg>
+                      </div>
+                      <h4 class="text-xl font-semibold mb-3">Lightning Fast</h4>
+                      <p class="text-gray-400 text-sm">Optimized performance and rapid delivery timelines without compromising quality</p>
+                  </div>
+
+                  <div class="stat-card bg-dark-elevated p-8 rounded-2xl border border-dark-border text-center">
+                      <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                          </svg>
+                      </div>
+                      <h4 class="text-xl font-semibold mb-3">Enterprise Security</h4>
+                      <p class="text-gray-400 text-sm">Bank-level security protocols and compliance standards across all solutions</p>
+                  </div>
+
+                  <div class="stat-card bg-dark-elevated p-8 rounded-2xl border border-dark-border text-center">
+                      <div class="w-16 h-16 bg-accent-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                          <svg class="w-8 h-8 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"></path>
+                          </svg>
+                      </div>
+                      <h4 class="text-xl font-semibold mb-3">24/7 Support</h4>
+                      <p class="text-gray-400 text-sm">Round-the-clock technical support and maintenance for peace of mind</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-dark">
@@ -646,214 +775,212 @@
     <!-- Technologies Stack Section -->
     <section id="technologies" class="py-20 bg-dark">
       <div class="container mx-auto px-6">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
-              Our Technology Stack
-            </h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto text-pretty">
-              We leverage cutting-edge technologies and proven frameworks to
-              build scalable, performant, and maintainable solutions.
-            </p>
+          <div class="max-w-6xl mx-auto">
+              <!-- Header -->
+              <div class="text-center mb-16">
+                  <div class="inline-block mb-4">
+                      <span class="text-primary text-sm font-semibold tracking-wider uppercase bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
+                          Our Tech Arsenal
+                      </span>
+                  </div>
+                  <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+                      Powered by Modern Technology
+                  </h2>
+                  <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                      We harness industry-leading frameworks and cutting-edge tools to deliver 
+                      high-performance, scalable solutions that drive your business forward.
+                  </p>
+              </div>
+
+              <!-- Technology Cards Grid -->
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                  <!-- Frontend Technologies -->
+                  <div class="tech-card bg-dark-lighter p-8 rounded-2xl border border-dark-border hover:border-accent-blue/50 group">
+                      <div class="w-14 h-14 bg-accent-blue/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent-blue/30 transition-all duration-300 group-hover:animate-float">
+                          <svg class="w-7 h-7 text-accent-blue" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.447-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.36-.034-.47 0-.92.014-1.36.034.44-.572.895-1.096 1.36-1.564zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2.39-.41.783-.64 1.174-.225.392-.465.774-.705 1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.783.64-1.174zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.53zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.36.034.47 0 .92-.014 1.36-.034-.44.572-.895 1.095-1.36 1.56-.465-.467-.92-.992-1.36-1.56z"/>
+                          </svg>
+                      </div>
+                      <h3 class="text-xl font-semibold mb-4 group-hover:text-accent-blue transition-colors">Frontend Development</h3>
+                      <div class="space-y-3 text-sm text-gray-300">
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>React & Next.js</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>Vue.js & Nuxt.js</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>Angular & Svelte</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>TailwindCSS</span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Backend Technologies -->
+                  <div class="tech-card bg-dark-lighter p-8 rounded-2xl border border-dark-border hover:border-accent-red/50 group">
+                      <div class="w-14 h-14 bg-accent-red/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent-red/30 transition-all duration-300 group-hover:animate-float">
+                          <svg class="w-7 h-7 text-accent-red" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 3c-3.866 0-7 3.134-7 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 2c2.761 0 5 2.239 5 5s-2.239 5-5 5-5-2.239-5-5 2.239-5 5-5z"/>
+                          </svg>
+                      </div>
+                      <h3 class="text-xl font-semibold mb-4 group-hover:text-accent-red transition-colors">Backend Engineering</h3>
+                      <div class="space-y-3 text-sm text-gray-300">
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>Node.js & Express</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>Python & Django</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>Ruby on Rails</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>PHP & Laravel</span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Database Technologies -->
+                  <div class="tech-card bg-dark-lighter p-8 rounded-2xl border border-dark-border hover:border-accent-green/50 group">
+                      <div class="w-14 h-14 bg-accent-green/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent-green/30 transition-all duration-300 group-hover:animate-float">
+                          <svg class="w-7 h-7 text-accent-green" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 0C8.817 0 3 1.476 3 4.5v15C3 22.524 8.817 24 12 24s9-1.476 9-4.5v-15C21 1.476 15.183 0 12 0zm7.5 19.5c0 1.38-3.358 3-7.5 3s-7.5-1.62-7.5-3V18c1.584 1.26 4.89 1.875 7.5 1.875s5.916-.615 7.5-1.875v1.5zm0-4.5c0 1.38-3.358 3-7.5 3s-7.5-1.62-7.5-3V13.5c1.584 1.26 4.89 1.875 7.5 1.875s5.916-.615 7.5-1.875V15zm0-4.5c0 1.38-3.358 3-7.5 3s-7.5-1.62-7.5-3V9c1.584 1.26 4.89 1.875 7.5 1.875S17.916 10.26 19.5 9v1.5zM12 9C8.642 9 4.5 7.38 4.5 4.5S8.642 1.5 12 1.5s7.5 1.62 7.5 4.5S15.358 9 12 9z"/>
+                          </svg>
+                      </div>
+                      <h3 class="text-xl font-semibold mb-4 group-hover:text-accent-green transition-colors">Database Solutions</h3>
+                      <div class="space-y-3 text-sm text-gray-300">
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>PostgreSQL</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>MongoDB</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>MySQL & Redis</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>Supabase</span>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Cloud & DevOps -->
+                  <div class="tech-card bg-dark-lighter p-8 rounded-2xl border border-dark-border hover:border-accent-purple/50 group">
+                      <div class="w-14 h-14 bg-accent-purple/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent-purple/30 transition-all duration-300 group-hover:animate-float">
+                          <svg class="w-7 h-7 text-accent-purple" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M19.54 7.52c.1-.19.19-.38.27-.58a5.52 5.52 0 0 0-10.54.04c-.08.2-.16.39-.23.59A4.5 4.5 0 0 0 9 16.5h10a4.5 4.5 0 0 0 .54-8.98zM19 15H9a3.5 3.5 0 0 1-.28-6.99l.63-.05.22-.61c.31-.88.98-1.57 1.85-1.91a4.52 4.52 0 0 1 5.77 2.31l.22.47.51.08A3.5 3.5 0 0 1 19 15z"/>
+                          </svg>
+                      </div>
+                      <h3 class="text-xl font-semibold mb-4 group-hover:text-accent-purple transition-colors">Cloud & DevOps</h3>
+                      <div class="space-y-3 text-sm text-gray-300">
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>AWS & Azure</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>Docker & K8s</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>CI/CD Automation</span>
+                          </div>
+                          <div class="flex items-center space-x-3 tech-item cursor-pointer">
+                              <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                              <span>Terraform & Vercel</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Additional Technologies Section -->
+              <div class="mt-20">
+                  <div class="text-center mb-10">
+                      <h3 class="text-3xl font-display font-semibold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                          Extended Technology Ecosystem
+                      </h3>
+                      <p class="text-gray-400 max-w-2xl mx-auto">
+                          Our expertise spans across modern frameworks, specialized tools, and emerging technologies
+                      </p>
+                  </div>
+                  
+                  <div class="flex flex-wrap justify-center gap-3">
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          GraphQL
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          TypeScript
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          React Native
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          Flutter
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          Elasticsearch
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          Firebase
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          Stripe
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          Shopify
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          WebSockets
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          Socket.io
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          Prisma
+                      </span>
+                      <span class="bg-dark-lighter hover:bg-dark-elevated border border-dark-border hover:border-primary/30 px-5 py-2.5 rounded-full text-sm transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/10">
+                          tRPC
+                      </span>
+                  </div>
+              </div>
+
+              <!-- Stats Section -->
+              <div class="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div class="text-center p-6 bg-dark-lighter rounded-xl border border-dark-border">
+                      <div class="text-4xl font-display font-bold text-primary mb-2">50+</div>
+                      <div class="text-gray-400 text-sm">Technologies</div>
+                  </div>
+                  <div class="text-center p-6 bg-dark-lighter rounded-xl border border-dark-border">
+                      <div class="text-4xl font-display font-bold text-secondary mb-2">10+</div>
+                      <div class="text-gray-400 text-sm">Years Experience</div>
+                  </div>
+                  <div class="text-center p-6 bg-dark-lighter rounded-xl border border-dark-border">
+                      <div class="text-4xl font-display font-bold text-accent-green mb-2">99%</div>
+                      <div class="text-gray-400 text-sm">Uptime SLA</div>
+                  </div>
+                  <div class="text-center p-6 bg-dark-lighter rounded-xl border border-dark-border">
+                      <div class="text-4xl font-display font-bold text-accent-purple mb-2">24/7</div>
+                      <div class="text-gray-400 text-sm">Support</div>
+                  </div>
+              </div>
           </div>
-
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Frontend Technologies -->
-            <div
-              class="bg-dark-lighter p-6 rounded-xl border border-dark-border"
-            >
-              <div
-                class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-blue-400"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.447-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.36-.034-.47 0-.92.014-1.36.034.44-.572.895-1.096 1.36-1.564zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2.39-.41.783-.64 1.174-.225.392-.465.774-.705 1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.783.64-1.174zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.53zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.36.034.47 0 .92-.014 1.36-.034-.44.572-.895 1.095-1.36 1.56-.465-.467-.92-.992-1.36-1.56z"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold mb-3">Frontend</h3>
-              <div class="space-y-2 text-sm text-gray-300">
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>React & Next.js</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Vue.js & Nuxt.js</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Angular</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>TailwindCSS</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Backend Technologies -->
-            <div
-              class="bg-dark-lighter p-6 rounded-xl border border-dark-border"
-            >
-              <div
-                class="w-12 h-12 bg-red-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-red-400"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20.61 0H3.39C2.189 0 1.23.96 1.23 2.16v19.681c0 1.198.959 2.159 2.16 2.159h17.22c1.2 0 2.159-.961 2.159-2.159V2.16C22.77.96 21.811 0 20.61 0zm-7.064 9.841c-.059-.187-.059-.279-.059-.279s-.06.092-.06.279c0 .187.06.279.06.279s.059-.092.059-.279zm-2.523.659c-.06-.187-.06-.279-.06-.279s-.059.092-.059.279c0 .187.059.279.059.279s.06-.092.06-.279zm-2.523.659c-.06-.187-.06-.279-.06-.279s-.059.092-.059.279c0 .187.059.279.059.279s.06-.092.06-.279z"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold mb-3">Backend</h3>
-              <div class="space-y-2 text-sm text-gray-300">
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Ruby on Rails</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Node.js & Express</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Python & Django</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>PHP & Laravel</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Database Technologies -->
-            <div
-              class="bg-dark-lighter p-6 rounded-xl border border-dark-border"
-            >
-              <div
-                class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-green-400"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6s-4.298 9.6-9.6 9.6S2.4 17.302 2.4 12 6.698 2.4 12 2.4z"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold mb-3">Database</h3>
-              <div class="space-y-2 text-sm text-gray-300">
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>MySQL</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>PostgreSQL</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>MongoDB</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Redis</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cloud & DevOps -->
-            <div
-              class="bg-dark-lighter p-6 rounded-xl border border-dark-border"
-            >
-              <div
-                class="w-12 h-12 bg-purple-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4"
-              >
-                <svg
-                  class="w-6 h-6 text-purple-400"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-semibold mb-3">Cloud & DevOps</h3>
-              <div class="space-y-2 text-sm text-gray-300">
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>AWS & Azure</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Docker & Kubernetes</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>CI/CD Pipelines</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <div class="w-2 h-2 bg-primary rounded-full"></div>
-                  <span>Terraform</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Additional Technologies -->
-          <div class="mt-16 text-center">
-            <h3 class="text-2xl font-semibold mb-8">
-              And Many More Technologies
-            </h3>
-            <div class="flex flex-wrap justify-center gap-4">
-              <span
-                class="bg-dark-lighter border border-dark-border px-4 py-2 rounded-full text-sm"
-                >GraphQL</span
-              >
-              <span
-                class="bg-dark-lighter border border-dark-border px-4 py-2 rounded-full text-sm"
-                >TypeScript</span
-              >
-              <span
-                class="bg-dark-lighter border border-dark-border px-4 py-2 rounded-full text-sm"
-                >Flutter</span
-              >
-              <span
-                class="bg-dark-lighter border border-dark-border px-4 py-2 rounded-full text-sm"
-                >React Native</span
-              >
-              <span
-                class="bg-dark-lighter border border-dark-border px-4 py-2 rounded-full text-sm"
-                >Elasticsearch</span
-              >
-              <span
-                class="bg-dark-lighter border border-dark-border px-4 py-2 rounded-full text-sm"
-                >Firebase</span
-              >
-              <span
-                class="bg-dark-lighter border border-dark-border px-4 py-2 rounded-full text-sm"
-                >Stripe</span
-              >
-              <span
-                class="bg-dark-lighter border border-dark-border px-4 py-2 rounded-full text-sm"
-                >Shopify</span
-              >
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
+  </section>
+
 
     <!-- Portfolio Section -->
     <section id="projects" class="py-20 bg-dark-lighter">
