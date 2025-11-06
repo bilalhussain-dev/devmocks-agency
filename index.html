@@ -49,11 +49,12 @@
     />
 
     <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="./public/img/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="icon" type="image/png" href="public/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="public/img/favicon.svg" />
+    <link rel="shortcut icon" href="public/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="public/img/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Devmocks" />
+    <link rel="manifest" href="public/img/site.webmanifest" />
     <!-- Core theme TailwindCSS-->
     <link rel="stylesheet" href="./public/css/output.css" />
     <!-- Core theme CSS-->
@@ -71,14 +72,7 @@
       <nav
         class="container mx-auto px-6 py-4 flex items-center justify-between"
       >
-        <div class="flex items-center space-x-2">
-          <div
-            class="w-8 h-8 bg-primary rounded-sm flex items-center justify-center"
-          >
-            <span class="text-dark font-bold text-lg">D</span>
-          </div>
-          <span class="text-xl font-display font-bold">Devmocks</span>
-        </div>
+        <a href="/"><img src="public/img/devmocks-logo.svg" alt="devmocks logo"></a>
 
         <div class="hidden md:flex items-center space-x-8">
           <a
