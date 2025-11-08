@@ -111,7 +111,7 @@ img[loading="lazy"]:not([src]) {
 }
 
 #mobile-menu.show {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 /* Header background on scroll */
