@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Bootcamp - Learn to Code | Devmocks</title>
+    <meta name="description" content="Live coding classes for kids and teens. Learn HTML5, CSS3, JavaScript, and modern web development with friendly mentoring and fun exercises.">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <!-- Core theme TailwindCSS-->
+    <link rel="stylesheet" href="../css/output.css">
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 255, 136, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 136, 0);
+            }
+        }
+        
+        .animate-pulse-ring {
+            animation: pulse-ring 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white font-sans">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
+                    <span class="text-dark font-bold text-lg">D</span>
+                </div>
+                <span class="text-xl font-display font-bold">Devmocks</span>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/" class="text-gray-300 hover:text-primary transition-colors">Home</a>
+                <a href="/#contact" class="bg-primary text-dark px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all">Get Started</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+        </div>
+
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(0, 255, 136, 0.3) 1px, transparent 0); background-size: 50px 50px;"></div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-2 bg-dark-lighter border border-dark-border rounded-full px-4 py-2 mb-8">
+                    <div class="w-2 h-2 bg-primary rounded-full"></div>
+                    <span class="text-sm text-gray-300">Perfect for beginners aged 8-18</span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-5xl md:text-7xl font-display font-bold mb-8 text-balance leading-tight">
+                    Learn to Code<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">The Fun Way</span>
+                </h1>
+
+                <!-- Subheading -->
+                <p class="text-lg md:text-xl text-gray-300 mb-4 text-pretty max-w-3xl mx-auto">
+                    Live coding classes for kids and teens with zero experience needed
+                </p>
+                <p class="text-base text-gray-400 mb-12 text-pretty max-w-2xl mx-auto">
+                    Learn HTML5, CSS3, JavaScript, Bootstrap & TailwindCSS with friendly mentors, fun exercises, and real projects
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+                    <button class="group bg-primary text-dark px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all transform hover:scale-105 flex items-center space-x-2">
+                        <span>Enroll Your Child Now</span>
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </button>
+                    <button class="group border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-primary hover:text-dark transition-all">
+                        Book a Free Trial Class
+                    </button>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-primary mb-2">$10</div>
+                        <div class="text-sm text-gray-400">Per Hour</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-primary mb-2">1-on-1</div>
+                        <div class="text-sm text-gray-400">Mentoring</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-primary mb-2">Live</div>
+                        <div class="text-sm text-gray-400">Classes</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-primary mb-2">100%</div>
+                        <div class="text-sm text-gray-400">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Arrow -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <svg class="w-6 h-6 text-gray-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="py-20 bg-dark-lighter">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Content -->
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                            Coding is a Superpower
+                        </h2>
+                        <p class="text-lg text-gray-300 mb-4">
+                            Our bootcamp is designed for kids and teenagers with <span class="text-primary font-semibold">zero coding experience</span>. We believe that learning to code should be fun, engaging, and accessible to everyone.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-6">
+                            With our friendly mentors and interactive lessons, your child will build real websites, create cool projects, and gain confidence in their coding abilities.
+                        </p>
+                        
+                        <!-- Key Points -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-primary bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">No Experience Needed</h3>
+                                    <p class="text-gray-400">We start from the very basics</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-primary bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Learn by Doing</h3>
+                                    <p class="text-gray-400">Hands-on projects and real-world examples</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-6 h-6 bg-primary bg-opacity-20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Personal Mentors</h3>
+                                    <p class="text-gray-400">1-on-1 support every step of the way</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modern Image Section -->
+                    <div class="relative flex justify-center items-center">
+                        <!-- Floating Background Elements -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary opacity-10 rounded-full blur-3xl animate-float"></div>
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary opacity-10 rounded-full blur-3xl" style="animation: float 4s ease-in-out infinite reverse;"></div>
+                        
+                        <!-- Main Image Container -->
+                        <div class="relative z-10 w-full">
+                            <div class="group relative overflow-hidden rounded-2xl shadow-2xl">
+                                <!-- Image with overlay -->
+                                <div class="relative h-96 md:h-full overflow-hidden">
+                                    <img 
+                                        src="../img/programming-for-kids-and-teens-devmocks.webp" 
+                                        alt="Kids learning to code at Devmocks bootcamp"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    >
+                                    <!-- Gradient Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-dark-lighter via-transparent to-transparent opacity-40"></div>
+                                </div>
+
+                                <!-- Border Glow Effect -->
+                                <div class="absolute inset-0 rounded-2xl border-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+
+                            <!-- Info Badge -->
+                            <div class="absolute -bottom-6 -right-6 z-20">
+                                <div class="bg-gradient-to-br from-primary to-secondary p-1 rounded-xl shadow-lg">
+                                    <div class="bg-dark-lighter rounded-lg px-5 py-3 text-center">
+                                        <div class="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">3</div>
+                                        <p class="text-xs text-gray-300 font-semibold">Months Program</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Side Info Pills -->
+                            <div class="absolute top-6 left-6 z-20 space-y-3">
+                                <div class="bg-dark-lighter bg-opacity-90 backdrop-blur-md border border-primary border-opacity-30 rounded-full px-4 py-2 flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                                    <span class="text-sm font-semibold text-primary">Live Classes</span>
+                                </div>
+                                <div class="bg-dark-lighter bg-opacity-90 backdrop-blur-md border border-secondary border-opacity-30 rounded-full px-4 py-2 flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-secondary rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                                    <span class="text-sm font-semibold text-secondary">1-on-1 Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Simple & Affordable Pricing</h2>
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                        Quality coding education shouldn't be expensive
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Pricing Card -->
+                    <div class="bg-dark-lighter p-8 rounded-xl border-2 border-primary">
+                        <div class="text-center mb-8">
+                            <div class="text-5xl font-bold text-primary mb-2">$10<span class="text-xl text-gray-400">/hour</span></div>
+                            <p class="text-gray-300">Perfect for serious learners</p>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>1-on-1 Mentoring & Support</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Weekly Live Coding Classes</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Class Recordings & Playback</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Homework Help & Guidance</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Project Portfolio Building</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Completion Certificate</span>
+                            </li>
+                        </ul>
+
+                        <button class="w-full bg-primary text-dark py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all">
+                            Start Learning Today
+                        </button>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <div class="flex flex-col justify-center">
+                        <div class="bg-dark-lighter p-8 rounded-xl border border-dark-border">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-primary">★★★★★</div>
+                            </div>
+                            <p class="text-lg text-gray-300 mb-6 italic">
+                                "My son went from zero coding knowledge to building his own website in just 3 months! The mentors are patient and the lessons are so well structured. Highly recommended!"
+                            </p>
+                            <div>
+                                <p class="font-semibold">Mohammad Tariq</p>
+                                <p class="text-sm text-gray-400">Parent of 12-year-old developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Structure Section -->
+    <section class="py-20 bg-dark-lighter">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">3-Month Frontend Bootcamp</h2>
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                        A complete journey from beginner to confident web developer
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <!-- Month 1 -->
+                    <div class="bg-dark p-8 rounded-xl border border-dark-border hover:border-primary transition-all group">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-opacity-30 group-hover:scale-110 transition-all">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Month 1</h3>
+                        <p class="text-gray-300 font-semibold mb-4">HTML5 & CSS3 Basics</p>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>✓ HTML5 structure and semantics</li>
+                            <li>✓ CSS3 styling and layouts</li>
+                            <li>✓ Box model and positioning</li>
+                            <li>✓ Forms and input elements</li>
+                            <li>✓ First mini project</li>
+                        </ul>
+                    </div>
+
+                    <!-- Month 2 -->
+                    <div class="bg-dark p-8 rounded-xl border border-dark-border hover:border-primary transition-all group">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-opacity-30 group-hover:scale-110 transition-all">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 00-2 2v4a2 2 0 002 2h10a2 2 0 002-2v-4a2 2 0 00-2-2m0 0V7a2 2 0 00-2-2h-6a2 2 0 00-2 2v10"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Month 2</h3>
+                        <p class="text-gray-300 font-semibold mb-4">Responsive Design & Frameworks</p>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>✓ Mobile-first design</li>
+                            <li>✓ Media queries and breakpoints</li>
+                            <li>✓ Bootstrap framework</li>
+                            <li>✓ TailwindCSS utilities</li>
+                            <li>✓ Responsive portfolio site</li>
+                        </ul>
+                    </div>
+
+                    <!-- Month 3 -->
+                    <div class="bg-dark p-8 rounded-xl border border-dark-border hover:border-primary transition-all group">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-opacity-30 group-hover:scale-110 transition-all">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-4">Month 3</h3>
+                        <p class="text-gray-300 font-semibold mb-4">JavaScript & Mini Projects</p>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>✓ JavaScript fundamentals</li>
+                            <li>✓ DOM manipulation</li>
+                            <li>✓ Event handling</li>
+                            <li>✓ Interactive projects</li>
+                            <li>✓ Final capstone project</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Your Child Will Learn -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">What Your Child Will Learn</h2>
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                        Essential skills for the modern web
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-dark-lighter p-6 rounded-xl border border-dark-border group hover:border-primary transition-all">
+                        <div class="w-10 h-10 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-blue-400 font-bold">&lt;&gt;</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Web Structure</h3>
+                        <p class="text-gray-400 text-sm">Build the foundation of websites with semantic HTML5</p>
+                    </div>
+
+                    <div class="bg-dark-lighter p-6 rounded-xl border border-dark-border group hover:border-primary transition-all">
+                        <div class="w-10 h-10 bg-purple-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-purple-400 font-bold">🎨</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Styling Mastery</h3>
+                        <p class="text-gray-400 text-sm">Create beautiful designs with CSS3, Bootstrap, and TailwindCSS</p>
+                    </div>
+
+                    <div class="bg-dark-lighter p-6 rounded-xl border border-dark-border group hover:border-primary transition-all">
+                        <div class="w-10 h-10 bg-yellow-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-yellow-400 font-bold">⚡</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Interactivity</h3>
+                        <p class="text-gray-400 text-sm">Bring websites to life with JavaScript interactions</p>
+                    </div>
+
+                    <div class="bg-dark-lighter p-6 rounded-xl border border-dark-border group hover:border-primary transition-all">
+                        <div class="w-10 h-10 bg-green-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-green-400 font-bold">📱</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Responsive Design</h3>
+                        <p class="text-gray-400 text-sm">Build websites that work on all devices perfectly</p>
+                    </div>
+
+                    <div class="bg-dark-lighter p-6 rounded-xl border border-dark-border group hover:border-primary transition-all">
+                        <div class="w-10 h-10 bg-red-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-red-400 font-bold">🚀</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Project Building</h3>
+                        <p class="text-gray-400 text-sm">Create real-world projects to build your portfolio</p>
+                    </div>
+
+                    <div class="bg-dark-lighter p-6 rounded-xl border border-dark-border group hover:border-primary transition-all">
+                        <div class="w-10 h-10 bg-indigo-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-indigo-400 font-bold">💡</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Problem Solving</h3>
+                        <p class="text-gray-400 text-sm">Develop critical thinking and debugging skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills After Bootcamp -->
+    <section class="py-20 bg-dark-lighter">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Skills Your Child Will Master</h2>
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                        Ready to build amazing websites
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold">Frontend Development Skills</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Semantic HTML5</p>
+                                    <p class="text-sm text-gray-400">Proper document structure</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Advanced CSS3</p>
+                                    <p class="text-sm text-gray-400">Layouts, animations, and effects</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">JavaScript Basics</p>
+                                    <p class="text-sm text-gray-400">Variables, functions, and events</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Responsive Design</p>
+                                    <p class="text-sm text-gray-400">Mobile-first approach</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold">Professional Skills</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-secondary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Problem Solving</p>
+                                    <p class="text-sm text-gray-400">Debug and fix code independently</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-secondary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Logical Thinking</p>
+                                    <p class="text-sm text-gray-400">Algorithm and flow understanding</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-secondary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Creativity</p>
+                                    <p class="text-sm text-gray-400">Express ideas through code</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-secondary bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.307 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Confidence</p>
+                                    <p class="text-sm text-gray-400">Master new concepts independently</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Why Choose Our Bootcamp?</h2>
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                        Everything your child needs to succeed
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-dark-lighter p-8 rounded-xl border border-dark-border group hover:border-primary hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-opacity-30 group-hover:scale-110 transition-all">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Live Mentoring</h3>
+                        <p class="text-gray-300">Expert mentors guide your child through every lesson with personalized support and encouragement</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-dark-lighter p-8 rounded-xl border border-dark-border group hover:border-primary hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-opacity-30 group-hover:scale-110 transition-all">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Progress Tracking</h3>
+                        <p class="text-gray-300">Monitor your child's progress with detailed reports and insights into their learning journey</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-dark-lighter p-8 rounded-xl border border-dark-border group hover:border-primary hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-opacity-30 group-hover:scale-110 transition-all">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Real Projects</h3>
+                        <p class="text-gray-300">Build actual websites and applications, not just exercises. Create a real portfolio</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-dark-lighter p-8 rounded-xl border border-dark-border group hover:border-primary hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-opacity-30 group-hover:scale-110 transition-all">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Certificates</h3>
+                        <p class="text-gray-300">Earn a recognized completion certificate to showcase their coding skills and achievements</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="bg-dark-lighter p-8 rounded-xl border border-dark-border group hover:border-primary hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-opacity-30 group-hover:scale-110 transition-all">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Flexible Schedule</h3>
+                        <p class="text-gray-300">Classes at times that work for your child. Sessions available afternoons and weekends</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="bg-dark-lighter p-8 rounded-xl border border-dark-border group hover:border-primary hover:shadow-lg transition-all">
+                        <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-opacity-30 group-hover:scale-110 transition-all">
+                            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Full Support</h3>
+                        <p class="text-gray-300">Homework help, technical support, and access to our community of young learners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-dark-lighter">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Ready to Start Coding?</h2>
+                <p class="text-lg md:text-xl text-gray-300 mb-12 text-pretty">
+                    Your child's coding journey starts here. Limited spots available in our upcoming cohort!
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <button class="group bg-primary text-dark px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all transform hover:scale-105 flex items-center justify-center space-x-2">
+                        <span>Enroll Your Child Now</span>
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </button>
+                    <button class="group border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-primary hover:text-dark transition-all">
+                        Book a Free Trial Class
+                    </button>
+                </div>
+
+                <p class="text-gray-400 mt-8">
+                    Questions? Contact us at <a href="mailto:kids@devmocks.com" class="text-primary hover:underline">kids@devmocks.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-dark-border py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
+                                <span class="text-dark font-bold text-lg">D</span>
+                            </div>
+                            <span class="text-xl font-display font-bold">Devmocks</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">
+                            Inspiring the next generation of developers through fun, engaging coding education.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+                            <li><a href="/#services" class="hover:text-primary transition-colors">Services</a></li>
+                            <li><a href="/public/pages/success-stories.html" class="hover:text-primary transition-colors">Success Stories</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-4">Program</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="#" class="hover:text-primary transition-colors">Curriculum</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors">Pricing</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors">Testimonials</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="mailto:kids@devmocks.com" class="hover:text-primary transition-colors">kids@devmocks.com</a></li>
+                            <li><a href="tel:+1234567890" class="hover:text-primary transition-colors">+1 (234) 567-890</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-dark-border pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Devmocks Kids Bootcamp. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu) {
+                    mobileMenu.classList.toggle('hidden');
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
