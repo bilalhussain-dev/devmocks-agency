@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complete Linux Commands Guide for Developers | Devmocks</title>
+    <meta name="description" content="An in-depth, complete resource guide to Linux commands for developers — navigation, file ops, permissions, processes, networking, package managers, systemd, cron, and more, with real examples.">
+
+    <link rel="canonical" href="https://devmocks.com/public/pages/linux-commands-guide.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://devmocks.com/public/pages/linux-commands-guide.html">
+    <meta property="og:title" content="The Complete Linux Commands Guide for Developers | Devmocks">
+    <meta property="og:description" content="An in-depth, complete resource guide to Linux commands for developers — navigation, file ops, permissions, processes, networking, package managers, systemd, cron, and more.">
+    <meta property="og:image" content="https://devmocks.com/public/img/devmocks.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="The Complete Linux Commands Guide for Developers | Devmocks">
+    <meta property="twitter:description" content="An in-depth, complete resource guide to Linux commands for developers — navigation, file ops, permissions, processes, networking, package managers, systemd, cron, and more.">
+    <meta property="twitter:image" content="https://devmocks.com/public/img/devmocks.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+
+    <!-- Core theme TailwindCSS-->
+    <link rel="stylesheet" href="../css/output.css">
+    <!-- Core theme CSS-->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-dark text-white font-sans">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark/90 backdrop-blur-md border-b border-dark-border">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="../../index.html"><img src="../img/devmocks-logo.svg" alt="devmocks logo"></a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../../index.html" class="text-gray-300 hover:text-primary transition-colors">Home</a>
+                <a href="../../index.html#resources" class="text-gray-300 hover:text-primary transition-colors">Resources</a>
+                <a href="../../index.html#contact" class="bg-primary text-dark px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all">Get Started</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="md:hidden bg-dark-lighter border-t border-dark-border hidden">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="../../index.html" class="block text-gray-300 hover:text-primary transition-colors">Home</a>
+                <a href="../../index.html#resources" class="block text-gray-300 hover:text-primary transition-colors">Resources</a>
+                <a href="../../index.html#contact" class="block bg-primary text-dark px-6 py-2 rounded-full font-medium text-center">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-secondary opacity-5 rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center space-x-2 bg-dark-lighter border border-dark-border rounded-full px-4 py-2 mb-8">
+                    <div class="w-2 h-2 bg-primary rounded-full"></div>
+                    <span class="text-sm text-gray-300">Complete Developer Resource Guide</span>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
+                    The Complete <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Linux Commands</span> Guide for Developers
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                    An in-depth reference covering everything a developer actually uses day to day —
+                    navigation, files, permissions, processes, networking, package managers, systemd, cron,
+                    and the shortcuts that make the terminal fast.
+                </p>
+
+                <div class="grid grid-cols-3 gap-6 max-w-xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-primary mb-1">17</div>
+                        <div class="text-sm text-gray-400">Categories</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-primary mb-1">130+</div>
+                        <div class="text-sm text-gray-400">Commands</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-primary mb-1">Free</div>
+                        <div class="text-sm text-gray-400">Always</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Nav / Table of Contents -->
+    <section class="py-8 bg-dark-lighter border-y border-dark-border">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <p class="text-sm text-gray-400 mb-4 uppercase tracking-wide font-semibold">Jump to a section</p>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#navigation" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Navigation</a>
+                    <a href="#file-ops" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">File Operations</a>
+                    <a href="#viewing-editing" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Viewing & Editing</a>
+                    <a href="#text-processing" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Text Processing</a>
+                    <a href="#permissions" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Permissions</a>
+                    <a href="#process-mgmt" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Processes</a>
+                    <a href="#system-monitoring" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">System Monitoring</a>
+                    <a href="#networking" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Networking</a>
+                    <a href="#package-mgmt" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Package Managers</a>
+                    <a href="#archiving" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Archiving</a>
+                    <a href="#user-mgmt" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Users & Groups</a>
+                    <a href="#disk-storage" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Disk & Storage</a>
+                    <a href="#job-scheduling" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Job Scheduling</a>
+                    <a href="#systemd" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Services (systemd)</a>
+                    <a href="#environment-shell" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Environment & Shell</a>
+                    <a href="#shortcuts" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Shortcuts</a>
+                    <a href="#one-liners" class="text-sm bg-dark border border-dark-border hover:border-primary hover:text-primary text-gray-300 px-3 py-1.5 rounded-full transition-colors">Useful One-Liners</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+    <!-- 1. Navigation -->
+    <section id="navigation" class="py-16 bg-dark scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">1. Navigating the Filesystem</h2>
+                <p class="text-gray-400 mb-8">The commands you'll type more than any other — moving around and finding things.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">pwd</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="pwd">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Print the full path of the current working directory.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">cd ~/projects</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="cd ~/projects">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Change directory. Use <code class="text-gray-300">cd -</code> to jump back to the previous directory, and <code class="text-gray-300">cd ..</code> to go up one level.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">ls -la</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="ls -la">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List all files (including hidden ones) with permissions, size, and owner details.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">tree -L 2</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="tree -L 2">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show a directory structure as a visual tree, limited to 2 levels deep.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">find . -name "*.js"</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="find . -name &quot;*.js&quot;">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Recursively search for files matching a pattern, starting from the current directory.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">locate filename</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="locate filename">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Instantly find files by name using a prebuilt index (run <code class="text-gray-300">updatedb</code> first).</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">pushd /tmp && popd</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="pushd /tmp && popd">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Push a directory onto a stack and jump to it, then pop back to where you started.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">basename /path/to/file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="basename /path/to/file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Strip the directory path, leaving just the filename (pair with <code class="text-gray-300">dirname</code> for the opposite).</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. File Operations -->
+    <section id="file-ops" class="py-16 bg-dark-lighter scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">2. File & Directory Operations</h2>
+                <p class="text-gray-400 mb-8">Creating, copying, moving, and deleting — the bread and butter of file management.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">touch file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="touch file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Create an empty file, or update the modified timestamp if it already exists.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">mkdir -p a/b/c</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="mkdir -p a/b/c">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Create a directory, including any missing parent directories in the path.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">cp -r src/ dest/</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="cp -r src/ dest/">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Copy files and directories recursively. Add <code class="text-gray-300">-v</code> for verbose output.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">mv old.txt new.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="mv old.txt new.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Move or rename files and directories.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">rm -rf dir/</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="rm -rf dir/">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Remove files or directories, forcefully and recursively. <span class="text-secondary">There is no undo — use with care.</span></p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">rmdir empty-dir</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="rmdir empty-dir">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Remove a directory, but only if it's empty — a safer alternative to <code class="text-gray-300">rm -r</code>.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">ln -s /path/target link</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="ln -s /path/target link">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Create a symbolic link — a pointer to another file or directory.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">stat file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="stat file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show detailed metadata: size, permissions, timestamps, inode, and more.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">file mystery-file</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="file mystery-file">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Detect a file's type by inspecting its contents, not just its extension.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Viewing & Editing -->
+    <section id="viewing-editing" class="py-16 bg-dark scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">3. Viewing & Editing Files</h2>
+                <p class="text-gray-400 mb-8">Read and edit files without leaving the terminal — essential for remote servers.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">cat file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="cat file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Print an entire file's contents to the terminal.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">less file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="less file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Page through a large file without loading it all at once. <code class="text-gray-300">/pattern</code> searches, <code class="text-gray-300">q</code> quits.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">head -n 20 file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="head -n 20 file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show the first N lines of a file (default is 10).</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">tail -f app.log</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="tail -f app.log">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Follow a file in real time as new lines are appended — perfect for watching logs.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">nano file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="nano file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">A beginner-friendly terminal text editor with on-screen shortcut hints.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">vim file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="vim file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">A powerful modal editor. Press <code class="text-gray-300">i</code> to insert, <code class="text-gray-300">Esc</code> then <code class="text-gray-300">:wq</code> to save & quit.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">echo "hi" | tee out.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="echo &quot;hi&quot; | tee out.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Write output to a file <em>and</em> print it to the terminal at the same time.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Text Processing -->
+    <section id="text-processing" class="py-16 bg-dark-lighter scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">4. Text Processing & Search</h2>
+                <p class="text-gray-400 mb-8">The tools that make Linux a superpower for parsing logs and data on the fly.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">grep -rn "TODO" .</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="grep -rn &quot;TODO&quot; .">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Recursively search for a pattern, printing matching line numbers.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sed 's/foo/bar/g' file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sed 's/foo/bar/g' file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Stream-edit text: find & replace every occurrence of "foo" with "bar".</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">awk '{print $1}' file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="awk '{print $1}' file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Pattern-scan and process structured text, column by column.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">cut -d',' -f2 data.csv</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="cut -d',' -f2 data.csv">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Extract a specific column from delimited data, like a CSV file.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sort file.txt | uniq -c</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sort file.txt | uniq -c">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Sort lines, then count how many times each unique line appears.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">wc -l file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="wc -l file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Count lines in a file. Drop <code class="text-gray-300">-l</code> for word and byte counts too.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">diff file1.txt file2.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="diff file1.txt file2.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Compare two files line by line and show what's different.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">cat urls.txt | xargs -n1 curl -O</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="cat urls.txt | xargs -n1 curl -O">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Build and execute a command for each line of input — great for batch operations.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Permissions -->
+    <section id="permissions" class="py-16 bg-dark scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">5. Permissions & Ownership</h2>
+                <p class="text-gray-400 mb-8">Who can read, write, and execute what — and how to run commands as another user.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">chmod 755 script.sh</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="chmod 755 script.sh">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Set exact read/write/execute permissions numerically (owner: rwx, group/others: r-x).</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">chmod +x deploy.sh</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="chmod +x deploy.sh">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Make a script executable — the most common permissions fix you'll ever run.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">chown user:group file.txt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="chown user:group file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Change the owning user and group of a file or directory.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">umask 022</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="umask 022">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">View or set the default permission mask applied to newly created files.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo systemctl restart nginx</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo systemctl restart nginx">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Run a single command with elevated (typically root) privileges.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">su - deploy</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="su - deploy">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Switch to another user's shell entirely, loading their environment.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Process Management -->
+    <section id="process-mgmt" class="py-16 bg-dark-lighter scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">6. Process Management</h2>
+                <p class="text-gray-400 mb-8">Inspect, control, and kill running programs.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">ps aux</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="ps aux">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List every running process on the system with CPU/memory usage.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">htop</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="htop">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">An interactive, colorized process viewer — a friendlier upgrade over <code class="text-gray-300">top</code>.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">kill -9 1234</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="kill -9 1234">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Force-terminate a process by its PID. Try <code class="text-gray-300">kill</code> (no -9) first for a graceful shutdown.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">killall node</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="killall node">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Kill all processes matching a name instead of hunting down PIDs one by one.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">jobs</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="jobs">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List background and suspended jobs started from the current shell.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">fg %1</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="fg %1">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Bring a background job back to the foreground. Use <code class="text-gray-300">bg</code> to resume one in the background.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">nice -n 10 ./build.sh</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="nice -n 10 ./build.sh">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Launch a process with a lower CPU scheduling priority so it doesn't hog the machine.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">nohup ./server &amp;</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="nohup ./server &">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Keep a process running in the background even after you close the terminal session.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. System Monitoring -->
+    <section id="system-monitoring" class="py-16 bg-dark scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">7. System Monitoring & Info</h2>
+                <p class="text-gray-400 mb-8">Understand what your machine or server is actually doing right now.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">uname -a</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="uname -a">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Print kernel name, version, and architecture — useful for compatibility checks.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">uptime</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="uptime">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show how long the system has been running plus the load average.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">df -h</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="df -h">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show disk space usage across mounted filesystems, in human-readable units.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">du -sh ./node_modules</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="du -sh ./node_modules">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show the total size of a directory — great for tracking down disk hogs.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">free -h</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="free -h">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show total, used, and free RAM and swap memory.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">vmstat 1</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="vmstat 1">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Stream memory, CPU, and I/O stats every second — good for spotting bottlenecks live.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">lsblk</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="lsblk">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List all block devices (disks, partitions) in a readable tree.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">dmesg | tail -n 50</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="dmesg | tail -n 50">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show recent kernel messages — the first place to look after a crash or hardware issue.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Networking -->
+    <section id="networking" class="py-16 bg-dark-lighter scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">8. Networking</h2>
+                <p class="text-gray-400 mb-8">Diagnose connections, transfer files, and manage remote servers over SSH.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">ping -c 4 devmocks.com</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="ping -c 4 devmocks.com">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Test connectivity and latency to a host with 4 packets.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">curl -I https://example.com</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="curl -I https://example.com">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Fetch just the response headers from a URL — perfect for quick API/status checks.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">wget https://example.com/file.zip</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="wget https://example.com/file.zip">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Download a file directly from the command line.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">ss -tulpn</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="ss -tulpn">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show listening ports and the processes using them — the modern replacement for <code class="text-gray-300">netstat</code>.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">ip a</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="ip a">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show all network interfaces and their assigned IP addresses.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">traceroute devmocks.com</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="traceroute devmocks.com">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show every network hop a packet takes to reach its destination.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">dig devmocks.com</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="dig devmocks.com">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Query DNS records for a domain — A, MX, TXT, and more.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">ssh user@server.com</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="ssh user@server.com">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Open a secure remote shell on another machine.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">scp file.txt user@host:/path</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="scp file.txt user@host:/path">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Securely copy a file to (or from) a remote host over SSH.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">rsync -avz src/ user@host:dest/</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="rsync -avz src/ user@host:dest/">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Efficiently sync files, only transferring the parts that actually changed.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Package Management -->
+    <section id="package-mgmt" class="py-16 bg-dark scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">9. Package Management</h2>
+                <p class="text-gray-400 mb-8">Installing and updating software differs by distro — here's the cheat sheet for each.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo apt update && sudo apt upgrade</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo apt update && sudo apt upgrade">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Refresh package lists and upgrade installed packages (Debian/Ubuntu).</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo apt install nginx</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo apt install nginx">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Install a package on Debian/Ubuntu-based systems.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo dnf install nginx</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo dnf install nginx">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Install a package on Fedora and modern RHEL-based systems.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo yum install nginx</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo yum install nginx">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Install a package on older RHEL/CentOS systems.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo pacman -S nginx</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo pacman -S nginx">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Install a package on Arch Linux and its derivatives (Manjaro, EndeavourOS).</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">dpkg -l | grep nginx</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="dpkg -l | grep nginx">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List installed .deb packages and check whether a specific one is present.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo snap install code --classic</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo snap install code --classic">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Install a distro-agnostic Snap package, sandboxed and auto-updating.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Archiving -->
+    <section id="archiving" class="py-16 bg-dark-lighter scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">10. Archiving & Compression</h2>
+                <p class="text-gray-400 mb-8">Package up files for deployment, backups, or sharing.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">tar -czvf archive.tar.gz dir/</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="tar -czvf archive.tar.gz dir/">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Create a gzip-compressed tarball of a directory (c=create, z=gzip, v=verbose, f=file).</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">tar -xzvf archive.tar.gz</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="tar -xzvf archive.tar.gz">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Extract a gzip-compressed tarball into the current directory.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">zip -r archive.zip dir/</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="zip -r archive.zip dir/">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Create a .zip archive from a directory, recursively.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">unzip archive.zip</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="unzip archive.zip">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Extract the contents of a .zip archive.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">gzip file.txt / gunzip file.txt.gz</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="gzip file.txt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Compress or decompress a single file with gzip.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. User Management -->
+    <section id="user-mgmt" class="py-16 bg-dark scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">11. User & Group Management</h2>
+                <p class="text-gray-400 mb-8">Managing who has access to a system, particularly on shared servers.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">whoami</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="whoami">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Print the current logged-in username.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">id</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="id">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show your UID, GID, and every group you belong to.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo adduser newdev</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo adduser newdev">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Create a new user account, prompting for a password and details.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo usermod -aG docker newdev</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo usermod -aG docker newdev">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Add a user to an existing group without removing them from others.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">passwd</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="passwd">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Change the password for the current user (or another, if run as root).</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">groups</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="groups">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List the groups the current user belongs to.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Disk & Storage -->
+    <section id="disk-storage" class="py-16 bg-dark-lighter scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">12. Disk & Storage</h2>
+                <p class="text-gray-400 mb-8">Mounting drives, checking partitions, and formatting filesystems.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo mount /dev/sdb1 /mnt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo mount /dev/sdb1 /mnt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Attach a filesystem (like a USB drive) to a directory in the tree.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo umount /mnt</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo umount /mnt">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Safely detach a mounted filesystem before removing the drive.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo fdisk -l</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo fdisk -l">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List all disks and partitions on the system with their sizes and types.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo mkfs.ext4 /dev/sdb1</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo mkfs.ext4 /dev/sdb1">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Format a partition with the ext4 filesystem. <span class="text-secondary">This erases all data on it.</span></p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">lsblk -f</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="lsblk -f">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show block devices along with their filesystem type and UUID.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Job Scheduling -->
+    <section id="job-scheduling" class="py-16 bg-dark scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">13. Job Scheduling & Automation</h2>
+                <p class="text-gray-400 mb-8">Automate recurring tasks like backups, cleanups, and health checks.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">crontab -e</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="crontab -e">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Edit the current user's cron jobs — recurring commands run on a schedule.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">0 3 * * * /home/user/backup.sh</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="0 3 * * * /home/user/backup.sh">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">A cron line: run <code class="text-gray-300">backup.sh</code> every day at 3:00 AM (minute hour day month weekday).</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">crontab -l</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="crontab -l">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List all scheduled cron jobs for the current user.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">echo "./task.sh" | at 22:00</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="echo &quot;./task.sh&quot; | at 22:00">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Schedule a one-time job to run later, instead of a recurring cron entry.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Systemd -->
+    <section id="systemd" class="py-16 bg-dark-lighter scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">14. System Services (systemd)</h2>
+                <p class="text-gray-400 mb-8">Start, stop, and inspect background services on modern Linux distros.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">systemctl status nginx</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="systemctl status nginx">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Check whether a service is running, and view its recent log output.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo systemctl restart nginx</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo systemctl restart nginx">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Start, stop, or restart a service (swap the verb as needed).</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">sudo systemctl enable nginx</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="sudo systemctl enable nginx">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Make a service start automatically on every boot.</p>
+                    </div>
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">journalctl -u nginx -f</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="journalctl -u nginx -f">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Follow the live logs for a specific systemd service.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. Environment & Shell -->
+    <section id="environment-shell" class="py-16 bg-dark scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">15. Environment & Shell</h2>
+                <p class="text-gray-400 mb-8">Configure your shell environment and speed up repetitive commands.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">export NODE_ENV=production</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="export NODE_ENV=production">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Set an environment variable available to the current shell and child processes.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">echo $PATH</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="echo $PATH">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Print the value of an environment variable.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">alias ll='ls -la'</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="alias ll='ls -la'">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Create a shortcut for a longer command. Add to <code class="text-gray-300">~/.bashrc</code> to make it permanent.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">which node</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="which node">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Locate the executable a command name resolves to on your <code class="text-gray-300">$PATH</code>.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">env</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="env">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List every environment variable currently set in the shell.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">history | tail -20</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="history | tail -20">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show your recent command history.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">source ~/.bashrc</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="source ~/.bashrc">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Reload your shell config file without opening a new terminal.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. Shortcuts -->
+    <section id="shortcuts" class="py-16 bg-dark-lighter scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">16. Keyboard Shortcuts & Shell Tricks</h2>
+                <p class="text-gray-400 mb-8">Small tricks that add up to a much faster terminal workflow.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <div class="bg-dark border border-dark-border rounded-lg p-4">
+                        <code class="text-primary font-mono text-sm block mb-2">Ctrl + C</code>
+                        <p class="text-gray-400 text-sm">Cancel / interrupt the currently running command.</p>
+                    </div>
+                    <div class="bg-dark border border-dark-border rounded-lg p-4">
+                        <code class="text-primary font-mono text-sm block mb-2">Ctrl + Z</code>
+                        <p class="text-gray-400 text-sm">Suspend the current process, sending it to the background (resume with <code class="text-gray-300">fg</code>).</p>
+                    </div>
+                    <div class="bg-dark border border-dark-border rounded-lg p-4">
+                        <code class="text-primary font-mono text-sm block mb-2">Ctrl + R</code>
+                        <p class="text-gray-400 text-sm">Reverse-search your command history — start typing to find a past command.</p>
+                    </div>
+                    <div class="bg-dark border border-dark-border rounded-lg p-4">
+                        <code class="text-primary font-mono text-sm block mb-2">Ctrl + A / Ctrl + E</code>
+                        <p class="text-gray-400 text-sm">Jump the cursor to the start or end of the current line.</p>
+                    </div>
+                    <div class="bg-dark border border-dark-border rounded-lg p-4">
+                        <code class="text-primary font-mono text-sm block mb-2">Ctrl + L</code>
+                        <p class="text-gray-400 text-sm">Clear the terminal screen (same as typing <code class="text-gray-300">clear</code>).</p>
+                    </div>
+                    <div class="bg-dark border border-dark-border rounded-lg p-4">
+                        <code class="text-primary font-mono text-sm block mb-2">!!</code>
+                        <p class="text-gray-400 text-sm">Repeat the last command — handy for retrying with <code class="text-gray-300">sudo !!</code>.</p>
+                    </div>
+                    <div class="bg-dark border border-dark-border rounded-lg p-4">
+                        <code class="text-primary font-mono text-sm block mb-2">!$</code>
+                        <p class="text-gray-400 text-sm">Reuse the last argument of the previous command.</p>
+                    </div>
+                    <div class="bg-dark border border-dark-border rounded-lg p-4">
+                        <code class="text-primary font-mono text-sm block mb-2">Tab</code>
+                        <p class="text-gray-400 text-sm">Autocomplete file paths, commands, and flags. Double-tap to list all options.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17. One-liners -->
+    <section id="one-liners" class="py-16 bg-dark scroll-mt-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-2">17. Useful One-Liners</h2>
+                <p class="text-gray-400 mb-8">Combining commands with pipes is where Linux really shines. A few we reach for constantly.</p>
+                <div class="space-y-4">
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">find . -name "*.log" -mtime +7 -delete</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="find . -name &quot;*.log&quot; -mtime +7 -delete">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Delete log files older than 7 days — a classic disk-cleanup cron job.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">du -sh * | sort -rh | head -10</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="du -sh * | sort -rh | head -10">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">List the 10 largest files or folders in the current directory.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">ps aux --sort=-%mem | head -10</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="ps aux --sort=-%mem | head -10">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Show the top 10 processes by memory usage — the fastest way to spot a memory leak.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">grep -rn "TODO" --include=*.js .</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="grep -rn &quot;TODO&quot; --include=*.js .">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Find every TODO comment across a JavaScript codebase.</p>
+                    </div>
+
+                    <div class="bg-dark-lighter border border-dark-border rounded-lg p-4 hover:border-primary transition-colors">
+                        <div class="flex items-start justify-between gap-3 mb-2">
+                            <code class="text-primary font-mono text-sm break-all">history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10</code>
+                            <button class="copy-btn shrink-0 text-gray-500 hover:text-primary text-xs border border-dark-border hover:border-primary rounded px-2 py-1 transition-colors" data-copy="history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10">Copy</button>
+                        </div>
+                        <p class="text-gray-400 text-sm">Rank your 10 most-used shell commands of all time.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-dark-lighter border-t border-dark-border">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Bookmark This Guide</h2>
+                <p class="text-lg text-gray-300 mb-10">
+                    Whether you're setting up a server, debugging a deployment, or just leveling up your terminal skills —
+                    keep this page handy. And if you need a hand building or shipping your next project, we're here for that too.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="../../index.html#contact" class="group bg-primary text-dark px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all transform hover:scale-105 inline-flex items-center justify-center space-x-2">
+                        <span>Talk to Devmocks</span>
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="../../index.html#resources" class="group border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-primary hover:text-dark transition-all inline-flex items-center justify-center">
+                        Browse More Dev Resources
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Back to top -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 bg-dark-lighter border border-dark-border hover:border-primary text-primary w-11 h-11 rounded-full items-center justify-center shadow-lg transition-all hidden">
+        <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-dark border-t border-dark-border py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
+                                <span class="text-dark font-bold text-lg">D</span>
+                            </div>
+                            <span class="text-xl font-display font-bold">Devmocks</span>
+                        </div>
+                        <p class="text-gray-400 text-sm">
+                            Transforming ideas into exceptional digital experiences through innovation and technical excellence.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="../../index.html" class="hover:text-primary transition-colors">Home</a></li>
+                            <li><a href="../../index.html#services" class="hover:text-primary transition-colors">Services</a></li>
+                            <li><a href="../../index.html#resources" class="hover:text-primary transition-colors">Dev Resources</a></li>
+                            <li><a href="success-stories.html" class="hover:text-primary transition-colors">Success Stories</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-4">Guides</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="linux-commands-guide.html" class="hover:text-primary transition-colors">Linux Commands Guide</a></li>
+                            <li><a href="kids-bootcamp.html" class="hover:text-primary transition-colors">Kids Coding Bootcamp</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="../../index.html#contact" class="hover:text-primary transition-colors">Get in Touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-dark-border pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Devmocks. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Copy-to-clipboard for command cards
+        document.querySelectorAll('.copy-btn').forEach((btn) => {
+            btn.addEventListener('click', async () => {
+                const text = btn.getAttribute('data-copy') || '';
+                try {
+                    await navigator.clipboard.writeText(text);
+                    const original = btn.textContent;
+                    btn.textContent = 'Copied!';
+                    btn.classList.add('text-primary', 'border-primary');
+                    setTimeout(() => {
+                        btn.textContent = original;
+                        btn.classList.remove('text-primary', 'border-primary');
+                    }, 1500);
+                } catch (err) {
+                    /* clipboard unavailable, ignore */
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('back-to-top');
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 600) {
+                    backToTop.classList.remove('hidden');
+                    backToTop.classList.add('flex');
+                } else {
+                    backToTop.classList.add('hidden');
+                    backToTop.classList.remove('flex');
+                }
+            });
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>
